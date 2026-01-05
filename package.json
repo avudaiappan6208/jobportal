@@ -1,0 +1,19 @@
+{
+  "name": "be-jobs",
+  "version": "1.0.0",
+  "description": "This is a job portal application where users can search for jobs, apply for jobs, and manage their profiles. Employers can post job listings, review applications, and manage their company profiles.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avudaiappan6208/jobportal.git"
+  },
+  "author": "vishal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avudaiappan6208/jobportal/issues"
+  },
+  "homepage": "https://github.com/avudaiappan6208/jobportal#readme"
+}
