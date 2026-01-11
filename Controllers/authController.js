@@ -2,7 +2,7 @@ const User = require('../models/Users');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { SECRET_KEY } = require('../utils/config');
-const Users = require('../models/Users');
+
 
 
 const authController = {

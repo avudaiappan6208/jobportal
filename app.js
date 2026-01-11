@@ -4,7 +4,8 @@ const cookieParser=require('cookie-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const authrouter = require('./routes/authRoutes');
-app.use(express.json());    
+const userrouter = require('./routes/userroutes');
+app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
 app.use(cors({
@@ -13,4 +14,5 @@ app.use(cors({
 }));
 
 app.use('/api/v1/auth', authrouter)
+app.use('/api/v1/user', userrouter)
 module.exports = app;

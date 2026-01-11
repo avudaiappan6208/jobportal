@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { SECRET_KEY } = require('../utils/config');
+const User = require('../models/Users')
     
 
 
@@ -18,5 +19,20 @@ const auth = {
             next();
         });                 
     },
+
+allowrules:(roles)=>{
+    return async (req,res,next)=>{
+        const userid = req.Userid
+        const user = await User.findById(userid);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        if (!roles.includes(user.role)) {
+            return res.status(403).json({ message: 'Forbidden' });
+        }
+        next();
+    }
+}
+
 }
 module.exports = auth;
