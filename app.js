@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const authrouter = require('./routes/authRoutes');
 const userrouter = require('./routes/userroutes');
+const adminrouter = require('./routes/adminRoutes');
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
@@ -15,4 +16,5 @@ app.use(cors({
 
 app.use('/api/v1/auth', authrouter)
 app.use('/api/v1/user', userrouter)
+app.use('/api/v1/admin', adminrouter)
 module.exports = app;
