@@ -11,6 +11,10 @@ const companySchema = new mongoose.Schema({
     jobs: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Job'
+    }],
+    recruiters: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Recruiter'
     }]
 }); 
 

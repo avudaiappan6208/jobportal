@@ -5,14 +5,14 @@ const adminrouter = express.Router();
 // manage recruiters
 adminrouter.post('/recruiters', auth.checkauth,auth.allowrules(['admin']),adminController.createrecruiter);
 adminrouter.put('/recruiters/:id',auth.checkauth,auth.allowrules(['admin']),adminController.updaterecruiter);
-adminrouter.delete('/recruiter/:id',auth.checkauth,auth.allowrules(['admin']),adminController.deleterecruiter);
+adminrouter.delete('/recruiters/:id',auth.checkauth,auth.allowrules(['admin']),adminController.deleterecruiter);
 // manage companies
 adminrouter.post('/companies',auth.checkauth,auth.allowrules(['admin']),adminController.createcompany);
 adminrouter.put('/companies/:id',auth.checkauth,auth.allowrules(['admin']),adminController.updatecompany);
 adminrouter.delete('/companies/:id',auth.checkauth,auth.allowrules(['admin']),adminController.deletecompany);
 // assign and remove recruiters
 adminrouter.put('/companies/:companyid/assignrecruiter/:recruitersid',auth.checkauth,auth.allowrules(['admin']),adminController.assignrecruiter);
-adminrouter.delete('/companies/:companyid/assignrecruiter/:recruitersid',auth.checkauth,auth.allowrules(['admin']),adminController.removerecruiter);
+adminrouter.delete('/companies/:companyid/removerecruiter/:recruitersid',auth.checkauth,auth.allowrules(['admin']),adminController.removerecruiter);
 // manage jobs
 adminrouter.post('/jobs',auth.checkauth,auth.allowrules(['admin']),adminController.createjob);
 adminrouter.put('/jobs/:id',auth.checkauth,auth.allowrules(['admin']),adminController.updatejob);

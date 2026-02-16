@@ -54,7 +54,7 @@ const authController = {
     me: async (req, res) => {
         try {
            const { Userid } = req;
-          const user = await User.findById(Userid).select('-password, -__v');
+          const user = await User.findById(Userid).select('-password  -__v');
           res.status(200).json({ user });
         } catch (error) {
             res.status(500).json({ message: error.message });
