@@ -135,51 +135,51 @@ const adminController = {
             res.status(500).json({ message: error.message });
         }
     },
-    createjob: async (req, res) => {
-        try {
+    // createjob: async (req, res) => {
+    //     try {
 
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    },
-    updatejob: async (req, res) => {
-        try {
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    },
-    deletejob: async (req, res) => {
-        try {
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    },
-    viewalljobs: async (req, res) => {
-        try {
+    //     } catch (error) {
+    //         res.status(500).json({ message: error.message });
+    //     }
+    // },
+    // updatejob: async (req, res) => {
+    //     try {
+    //     } catch (error) {
+    //         res.status(500).json({ message: error.message });
+    //     }
+    // },
+    // deletejob: async (req, res) => {
+    //     try {
+    //     } catch (error) {
+    //         res.status(500).json({ message: error.message });
+    //     }
+    // },
+    // viewalljobs: async (req, res) => {
+    //     try {
 
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    },
-    viewallusers: async (req, res) => {
-        try {
+    //     } catch (error) {
+    //         res.status(500).json({ message: error.message });
+    //     }
+    // },
+    // viewallusers: async (req, res) => {
+    //     try {
 
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    },
-    updateuser: async (req, res) => {
-        try {
+    //     } catch (error) {
+    //         res.status(500).json({ message: error.message });
+    //     }
+    // },
+    // updateuser: async (req, res) => {
+    //     try {
 
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    },
-    deleteuser: async (req, res) => {
-        try {
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        }
-    },
+    //     } catch (error) {
+    //         res.status(500).json({ message: error.message });
+    //     }
+    // },
+    // deleteuser: async (req, res) => {
+    //     try {
+    //     } catch (error) {
+    //         res.status(500).json({ message: error.message });
+    //     }
+    // },
 };
 module.exports = adminController;

@@ -1,5 +1,5 @@
 const User = require('../models/Users');
-
+const Job = require('../models/job');
 const userController = {
     getprofile: async (req, res) => {
         try {
@@ -26,7 +26,7 @@ const userController = {
             const userId = req.params.id;
             await User.findByIdAndDelete(userId);
             res.clearCookie('token');
-            
+
             res.status(200).json({ message: 'User profile deleted successfully' });
 
         } catch (error) {
@@ -35,8 +35,17 @@ const userController = {
     },
     applyjob: async (req, res) => {
         try {
-
+            const jobid = req.params.jobid;
+            const userId = req.Userid;
+            const job = await Job.findById(jobid);
+            if(job.applicants.includes(userId)){
+                return res.status(400).json({ message: 'You have already applied for this job' });
+            }
+            job.applicants.push(userId);
+            await job.save();
+            res.status(200).json({ message: 'Job applied successfully' });
         } catch (error) {
+           
             res.status(500).json({ message: error.message });
         }
     },
