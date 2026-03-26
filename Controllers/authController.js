@@ -37,7 +37,7 @@ const authController = {
             }
             const token = jwt.sign({ id: user._id }, SECRET_KEY);
             res.cookie('token', token, { httpOnly: true });
-            res.json({ message: 'User logged in successfully' });
+            res.status(200).json({ message: 'User logged in successfully' });
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
@@ -45,7 +45,7 @@ const authController = {
     logout: (req, res) => {
         try {
             res.clearCookie('token');
-            res.json({ message: 'User logged out successfully' });
+            res.status(200).json({ message: 'User logged out successfully' });
 
         } catch (error) {
             res.status(500).json({ message: error.message });
